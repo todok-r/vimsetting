@@ -18,6 +18,13 @@ set grepprg=egrep
 
 set ea
 
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=80
+set smarttab
+set expandtab
+set smartindent
 "search settings {{{2
 set smartcase
 set ignorecase
@@ -93,11 +100,12 @@ endif
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype', 'charvaluehex' ] ]
       \ },
       \ 'component': {
-      \   'charvaluehex': '0x%B'
+      \   'charvaluehex': '0x%B',
       \ },
       \ }
